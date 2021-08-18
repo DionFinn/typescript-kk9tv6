@@ -13,13 +13,12 @@ function init() {
   
   cookies.push(new Cookie('Chocolate'));
   cookies.push(new Cookie('Vanilla'));
-
   let count = 0;
+  
   for (let c of cookies) {
     let newOption: HTMLOptionElement = document.createElement('option');
     newOption.innerHTML = c.name;
     newOption.value = count.toString();
-
     count++;
     cookieSelect.add(newOption);
   }
